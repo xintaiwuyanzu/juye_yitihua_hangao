@@ -49,7 +49,7 @@ spring:
       password: 123456
       username: neo4j
 common:
-  auto-init-data: true
+  auto-init-data: false
   #启动验证码功能
   enable-captcha: false
   file-upload-urls:
@@ -71,7 +71,7 @@ FTP:
   sftpPath: /etc/vsftpd/archiveFtp/
 archive:
   common:
-    auto-init-index: true
+    auto-init-index: false
 TEMPLATEPATCH: "F:\\template\\"
 
 sys:

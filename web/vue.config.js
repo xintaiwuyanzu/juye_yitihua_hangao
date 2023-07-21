@@ -10,15 +10,15 @@ module.exports = {
     devServer: {
         proxy: {
             '/api': {
-                target: 'http://127.0.0.1:8082/api',
+                target: 'http://127.0.0.1:8088/api',
                 pathRewrite: {'^/api': '/'}
             },
             '/upload': {
-                target: 'http://127.0.0.1:8082/upload',
+                target: 'http://127.0.0.1:8088/upload',
                 pathRewrite: {'^/upload': '/'}
             },
             '/pdf': {
-                target: 'http://127.0.0.1:8082/pdf',
+                target: 'http://127.0.0.1:8088/pdf',
                 pathRewrite: {'^/pdf': '/'}
             }
         }
