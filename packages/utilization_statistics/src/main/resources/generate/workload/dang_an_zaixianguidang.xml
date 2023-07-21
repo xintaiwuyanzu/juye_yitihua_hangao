@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:x="urn:schemas-microsoft-com:office:excel" xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+          xmlns:dt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+    <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+        <Author>Administrator</Author>
+        <LastAuthor>罗学长呐</LastAuthor>
+        <Created>2016-12-02T08:54:00Z</Created>
+        <LastSaved>2022-07-25T02:53:33Z</LastSaved>
+    </DocumentProperties>
+    <CustomDocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+        <KSOProductBuildVer dt:dt="string">2052-11.1.0.11875</KSOProductBuildVer>
+        <ICV dt:dt="string">9E26ED0C539D419CBAA374CC8F5998C7</ICV>
+    </CustomDocumentProperties>
+    <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+        <WindowWidth>28125</WindowWidth>
+        <WindowHeight>12420</WindowHeight>
+        <ProtectStructure>False</ProtectStructure>
+        <ProtectWindows>False</ProtectWindows>
+    </ExcelWorkbook>
+    <Styles>
+        <Style ss:ID="Default" ss:Name="Normal">
+            <Alignment ss:Vertical="Center"/>
+            <Borders/>
+            <Font ss:FontName="宋体" x:CharSet="134" ss:Size="12"/>
+            <Interior/>
+            <NumberFormat/>
+            <Protection/>
+        </Style>
+        <Style ss:ID="s49"/>
+        <Style ss:ID="s50">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+        </Style>
+        <Style ss:ID="s51">
+            <Alignment ss:Horizontal="Center" ss:Vertical="Center"/>
+        </Style>
+    </Styles>
+    <Worksheet ss:Name="Sheet1">
+        <Table ss:ExpandedColumnCount="2" ss:ExpandedRowCount="3" x:FullColumns="1" x:FullRows="1"
+               ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25">
+            <Column ss:Index="1" ss:StyleID="s49" ss:AutoFitWidth="0" ss:Width="189.75"/>
+            <Column ss:Index="2" ss:StyleID="s49" ss:AutoFitWidth="0" ss:Width="223.5"/>
+            <Row>
+                <Cell ss:StyleID="s51" ss:MergeAcross="1">
+                    <Data ss:Type="String">档案在线归档数量报表</Data>
+                </Cell>
+            </Row>
+            <Row>
+                <Cell>
+                    <Data ss:Type="String">年份</Data>
+                </Cell>
+                <Cell>
+                    <Data ss:Type="String">目录数量</Data>
+                </Cell>
+            </Row>
+            <#list data as obj>
+            <Row>
+                <Cell>
+                    <Data ss:Type="String">${obj.year}</Data>
+                </Cell>
+                <Cell>
+                    <Data ss:Type="String">${obj.num}</Data>
+                </Cell>
+            </Row>
+        </#list>
+    </Table>
+    <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+        <PageSetup>
+            <Header x:Margin="0.511805555555556"/>
+            <Footer x:Margin="0.511805555555556"/>
+        </PageSetup>
+        <Selected/>
+        <TopRowVisible>0</TopRowVisible>
+        <LeftColumnVisible>0</LeftColumnVisible>
+        <PageBreakZoom>100</PageBreakZoom>
+        <Panes>
+            <Pane>
+                <Number>3</Number>
+                <ActiveRow>2</ActiveRow>
+                <ActiveCol>1</ActiveCol>
+                <RangeSelection>R3C2</RangeSelection>
+            </Pane>
+        </Panes>
+        <ProtectObjects>False</ProtectObjects>
+        <ProtectScenarios>False</ProtectScenarios>
+    </WorksheetOptions>
+</Worksheet>
+<Worksheet ss:Name="Sheet2">
+<Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1" x:FullRows="1"
+       ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25"/>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+    <PageSetup>
+        <Header x:Margin="0.511805555555556"/>
+        <Footer x:Margin="0.511805555555556"/>
+    </PageSetup>
+    <TopRowVisible>0</TopRowVisible>
+    <LeftColumnVisible>0</LeftColumnVisible>
+    <PageBreakZoom>100</PageBreakZoom>
+    <ProtectObjects>False</ProtectObjects>
+    <ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+<Worksheet ss:Name="Sheet3">
+<Table ss:ExpandedColumnCount="1" ss:ExpandedRowCount="1" x:FullColumns="1" x:FullRows="1"
+       ss:DefaultColumnWidth="54" ss:DefaultRowHeight="14.25"/>
+<WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+    <PageSetup>
+        <Header x:Margin="0.511805555555556"/>
+        <Footer x:Margin="0.511805555555556"/>
+    </PageSetup>
+    <TopRowVisible>0</TopRowVisible>
+    <LeftColumnVisible>0</LeftColumnVisible>
+    <PageBreakZoom>100</PageBreakZoom>
+    <ProtectObjects>False</ProtectObjects>
+    <ProtectScenarios>False</ProtectScenarios>
+</WorksheetOptions>
+</Worksheet>
+        </Workbook>

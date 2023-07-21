@@ -1,0 +1,26 @@
+/**
+档案相关全局样式
+ */
+
+/**
+drawer内嵌tableIndex
+ */
+.table_drawer {
+  .el-drawer__header {
+    margin: 0px;
+  }
+
+  .el-drawer__body {
+    display: flex;
+
+    .table_index {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+    }
+  }
+}
+
+.el-tooltip__popper {
+  max-width: 50%;
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@archive/receive-offline-filling",
+  "version": "0.0.1",
+  "description": "离线接收入库模块",
+  "dlib": true,
+  "devDependencies": {
+    "@dr/framework": "^0.0.4",
+    "@dr/process": "^0.1.0",
+    "@archive/core": "^0.0.1"
+  }
+}

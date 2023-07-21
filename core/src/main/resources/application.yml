@@ -1,0 +1,7 @@
+spring:
+  cache:
+    cache-names:
+      # 全宗
+      - archive.fond
+      # 门类分类
+      - archive.category

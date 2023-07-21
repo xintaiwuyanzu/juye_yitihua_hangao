@@ -1,0 +1,689 @@
+[
+  {
+    "name": "档案接收",
+    "children": [
+      {
+        "name": "在线移交档案接收",
+        "url": "/archive/filing/filingTask"
+      },
+      {
+        "name": "离线移交档案接收",
+        "children": [
+          {
+            "name": "离线目录接收记录",
+            "url": "/archive/task/batch/imp"
+          },
+          {
+            "name": "原文批量挂接",
+            "url": "/filehook"
+          },
+          {
+            "name": "原文挂接记录",
+            "url": "/archive/task/batch/hook"
+          },
+          {
+            "name": "导入导出目录配置",
+            "url": "/archive/manage/impscheme"
+          }
+        ]
+      },
+      {
+        "name": "接收记录",
+        "url": "/archive/filing/filingRecord"
+      },
+      {
+        "name": "接收暂存库",
+        "url": "/archive/receiveLib"
+      },
+      {
+        "name": "入库保存",
+        "children": [
+          {
+            "name": "整理库",
+            "url": "/archive/receiveLib"
+          },
+          {
+            "name": "入库流程",
+            "url": "/archive/filing/filingProcess"
+          },
+          {
+            "name": "待办任务",
+            "url": "/archive/filing/filingTask"
+          }
+        ]
+      },
+      {
+        "name": "回收站",
+        "url": "/archive/trashLib"
+      },
+      {
+        "name": "调整审批",
+        "url": "/archive/archiveChange"
+      },
+      {
+        "name": "延期移交档案申请的处理",
+        "url": "/transfer/postpone/receive"
+      }
+    ]
+  },
+  {
+    "name": "接收采集",
+    "children": [
+      {
+        "name": "业务系统归档数据接收",
+        "url": "/archive/task/batch/prearchive"
+      },
+      {
+        "name": "离线接收",
+        "children": [
+          {
+            "name": "离线目录接收记录",
+            "url": "/archive/task/batch/imp"
+          },
+          {
+            "name": "导入导出目录配置",
+            "url": "/archive/manage/impscheme"
+          }
+        ]
+      },
+      {
+        "name": "接收暂存库",
+        "url": "/archive/receiveLib"
+      },
+      {
+        "name": "回收站",
+        "url": "/archive/trashLib"
+      }
+    ]
+  },
+  {
+    "name": "档案整理",
+    "children": [
+      {
+        "name": "管理库",
+        "url": "/archive/manageLib"
+      },
+      {
+        "name": "导出记录",
+        "url": "/archive/task/batch/exp"
+      },
+      {
+        "name": "档案标签",
+        "url": "/archive/archiveTag"
+      }
+    ]
+  },
+  {
+    "name": "档案整理",
+    "children": [
+      {
+        "name": "管理库",
+        "url": "/archive/manageLib"
+      },
+      {
+        "name": "档案调整",
+        "url": "/archive/archiveChange"
+      }
+    ]
+  },
+  {
+    "name": "入库保存",
+    "children": [
+      {
+        "name": "入库流程",
+        "url": "/archive/filing/filingProcess"
+      },
+      {
+        "name": "入库审核",
+        "url": "/archive/filing/filingTask"
+      },
+      {
+        "name": "入库记录",
+        "url": "/archive/filing/filingRecord"
+      }
+    ]
+  },
+  {
+    "name": "查询利用",
+    "children": [
+      {
+        "name": "档案检索",
+        "url": "/consult/inse/search"
+      },
+      {
+        "name": "查阅档案",
+        "children": [
+          {
+            "name": "档案管理人员查档",
+            "children": [
+              {
+                "name": "我的查阅记录",
+                "url": "/consult/searchApply"
+              }
+            ]
+          },
+          {
+            "name": "非档案管理人员查阅档案",
+            "url": "/consult/register"
+          },
+          {
+            "name": "查阅其他档案室档案",
+            "children": [
+              {
+                "name": "查阅申请",
+                "url": "/consult/company"
+              },
+              {
+                "name": "待办任务",
+                "children": [
+                  {
+                    "name": "待审核",
+                    "url": "/consult/pending"
+                  },
+                  {
+                    "name": "待查档",
+                    "url": "/consult/await"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "检索结果审批",
+            "url": "/consult/pushApproval"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "档案编研",
+    "children": [
+      {
+        "name": "编研配置",
+        "children": [
+          {
+            "name": "模板管理",
+            "url": "/compilation/compilationcontent"
+          },
+          {
+            "name": "分类管理",
+            "url": "/compilation/classificationTask"
+          },
+          {
+            "name": "流程管理",
+            "url": "/compilation/approvalProcess"
+          }
+        ]
+      },
+      {
+        "name": "任务管理",
+        "url": "/compilation/taskmanagement"
+      },
+      {
+        "name": "任务列表",
+        "url": "/compilation/compilationarchives"
+      },
+      {
+        "name": "素材管理",
+        "url": "/compilation/material"
+      },
+      {
+        "name": "素材审核",
+        "url": "/compilation/material/applyd"
+      },
+      {
+        "name": "编研成果审核",
+        "url": "/compilation/approvalCompilation"
+      },
+      {
+        "name": "编研成果展示",
+        "url": "/compilation/achievements"
+      }
+    ]
+  },
+  {
+    "name": "档案鉴定",
+    "children": [
+      {
+        "name": "筛选规则分组",
+        "url": "/authenticate/appraisalrule"
+      },
+      {
+        "name": "依据管理",
+        "url": "/authenticate/basis"
+      },
+      {
+        "name": "关键词配置",
+        "url": "/authenticate/keyword"
+      },
+      {
+        "name": "开放鉴定",
+        "children": [
+          {
+            "name": "启动鉴定任务",
+            "url": "/appraisal/open"
+          },
+          {
+            "name": "任务领取",
+            "url": "/authenticate/receive"
+          },
+          {
+            "name": "任务分配",
+            "url": "/authenticate/distribution"
+          },
+          {
+            "name": "初审",
+            "url": "/authenticate/todotasks"
+          },
+          {
+            "name": "复审",
+            "url": "/authenticate/audit"
+          },
+          {
+            "name": "终审",
+            "url": "/authenticate/finalAudit"
+          }
+        ]
+      },
+      {
+        "name": "到期鉴定",
+        "children": [
+          {
+            "name": "启动鉴定任务",
+            "url": "/appraisal/expire"
+          },
+          {
+            "name": "任务领取",
+            "url": "/expire/receive"
+          },
+          {
+            "name": "任务分配",
+            "url": "/expire/distribution"
+          },
+          {
+            "name": "初审",
+            "url": "/expire/todotasks"
+          },
+          {
+            "name": "复审",
+            "url": "/expire/audit"
+          },
+          {
+            "name": "终审",
+            "url": "/expire/finalAudit"
+          }
+        ]
+      },
+      {
+        "name": "鉴定统计",
+        "url": "/statistics/entify"
+      },
+      {
+        "name": "定时任务",
+        "url": "/tem/task"
+      }
+    ]
+  },
+  {
+    "name": "档案处置",
+    "children": [
+      {
+        "name": "销毁档案管理",
+        "children": [
+          {
+            "name": "销毁列表",
+            "url": "/destory/applied"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "档案统计",
+    "children": [
+      {
+        "name": "统计报表查询",
+        "url": "/statistics/reportform"
+      },
+      {
+        "name": "档案资源统计",
+        "children": [
+          {
+            "name": "档案门类统计",
+            "url": "/statistics/resource"
+          },
+          {
+            "name": "档案分类统计",
+            "url": "/statistics/resourcestatistics"
+          }
+        ]
+      },
+      {
+        "name": "档案利用情况统计",
+        "url": "/statistics/utilize"
+      },
+      {
+        "name": "档案管理工作统计",
+        "url": "/statistics/filemanagement"
+      }
+    ]
+  },
+  {
+    "name": "电子档案长期保存",
+    "children": [
+      {
+        "name": "首页控制台",
+        "url": "/dzdacqbc/index"
+      },
+      {
+        "name": "全局策略管理",
+        "url": "/dzdacqbc/tactics"
+      },
+      {
+        "name": "存储空间管理",
+        "url": "/dzdacqbc/spaces"
+      },
+      {
+        "name": "分类管理",
+        "url": "/dzdacqbc/classification"
+      },
+      {
+        "name": "档案管理",
+        "url": "/dzdacqbc/delivery"
+      },
+      {
+        "name": "待办任务",
+        "url": "/dzdacqbc/delivery/record"
+      },
+      {
+        "name": "出库清单",
+        "url": "/dzdacqbc/delivery/list"
+      },
+      {
+        "name": "任务管理",
+        "url": "/dzdacqbc/task"
+      },
+      {
+        "name": "报警管理",
+        "url": "/dzdacqbc/alarm"
+      },
+      {
+        "name": "日志管理",
+        "url": "/dzdacqbc/log"
+      },
+      {
+        "name": "系统监控",
+        "url": "/dzdacqbc/monitor"
+      }
+    ]
+  },
+  {
+    "name": "实体档案辅助管理",
+    "children": [
+      {
+        "name": "库房管理",
+        "url": "/entityfiles/entity/location"
+      },
+      {
+        "name": "实体档案数据项",
+        "url": "/entityfiles/entity/type"
+      },
+      {
+        "name": "实体档案管理",
+        "url": "/entityfiles/entity"
+      },
+      {
+        "name": "出入库登记",
+        "url": "/entityfiles/inoutstorage"
+      },
+      {
+        "name": "出入库记录",
+        "url": "/entityfiles/his"
+      }
+    ]
+  },
+  {
+    "name": "档案移交",
+    "children": [
+      {
+        "name": "移交自预警设置",
+        "url": "/transfer/item"
+      },
+      {
+        "name": "移交记录",
+        "url": "/transfer/transfer"
+      },
+      {
+        "name": "移交审核",
+        "url": "/transfer/backlog"
+      },
+      {
+        "name": "移交接收",
+        "url": "/transfer/receive"
+      },
+      {
+        "name": "延期移交",
+        "children": [
+          {
+            "name": "延期申请",
+            "url": "/transfer/postpone/apply"
+          },
+          {
+            "name": "延期审核",
+            "url": "/transfer/postpone/receive"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "全宗卷管理",
+    "children": [
+      {
+        "name": "全宗卷查看",
+        "url": "/archive/management/dossierSee"
+      },
+      {
+        "name": "全宗卷内材料维护",
+        "url": "/archive/management/fond"
+      },
+      {
+        "name": "全宗卷内材料编辑",
+        "url": "/archive/management"
+      },
+      {
+        "name": "全宗卷移交审核",
+        "url": "/archive/management/handoverApproval"
+      },
+      {
+        "name": "全宗卷内材料审核",
+        "url": "/archive/management/dossieRexamine"
+      },
+      {
+        "name": "全宗卷审批流程",
+        "url": "/archive/management/auditProcess"
+      }
+    ]
+  },
+  {
+    "name": "业务指导",
+    "children": [
+      {
+        "name": "业务指导申请",
+        "url": "/business/applyBusiness"
+      },
+      {
+        "name": "指导业务管理",
+        "url": "/business"
+      },
+      {
+        "name": "待指导业务",
+        "url": "/business/backlog"
+      },
+      {
+        "name": "已指导业务",
+        "url": "/business/alreadyDone"
+      },
+      {
+        "name": "业务指导统计",
+        "url": "/business/count"
+      }
+    ]
+  },
+  {
+    "name": "年度检查",
+    "children": [
+      {
+        "name": "发起年度检查",
+        "url": "/jdzdcheck"
+      },
+      {
+        "name": "年度检查审核",
+        "children": [
+          {
+            "name": "待审核业务",
+            "url": "/jdzdcheck/backlog"
+          },
+          {
+            "name": "已审核业务",
+            "url": "/jdzdcheck/alreadyDone"
+          }
+        ]
+      },
+      {
+        "name": "年度检查业务管理",
+        "url": "/jdzdcheck/notice"
+      },
+      {
+        "name": "检查报告模板管理",
+        "url": "/jdzdcheck/template"
+      }
+    ]
+  },
+  {
+    "name": "执法检查",
+    "children": [
+      {
+        "name": "发起执法检查",
+        "url": "/procuratorial/inspection"
+      },
+      {
+        "name": "执法检查审核",
+        "url": "/procuratorial/inspection/backlog"
+      },
+      {
+        "name": "执法检查业务",
+        "children": [
+          {
+            "name": "检查通知",
+            "url": "/procuratorial/inspection/notice"
+          },
+          {
+            "name": "问题调整反馈确认",
+            "url": "/procuratorial/inspection/feedback"
+          }
+        ]
+      },
+      {
+        "name": "检查方案和规则管理",
+        "children": [
+          {
+            "name": "检查人员方案",
+            "url": "/procuratorial/rule/person"
+          },
+          {
+            "name": "检查单位方案",
+            "url": "/procuratorial/rule/organise"
+          },
+          {
+            "name": "机构权重",
+            "url": "/procuratorial/organise"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "name": "系统管理",
+    "children": [
+      {
+        "name": "菜单管理",
+        "url": "/tem/menu"
+      },
+      {
+        "name": "档案配置",
+        "children": [
+          {
+            "name": "全宗管理",
+            "url": "/archive/manage/fond"
+          },
+          {
+            "name": "元数据管理",
+            "url": "/archive/manage/form"
+          },
+          {
+            "name": "元数据配置",
+            "url": "/archive/manage/formSchema"
+          },
+          {
+            "name": "待办任务",
+            "url": "/archive/task"
+          },
+          {
+            "name": "重建索引记录",
+            "url": "/archive/task/batch/rebuildindex"
+          },
+          {
+            "name": "客户端挂接",
+            "url": "/dataClient/inRecord"
+          },
+          {
+            "name": "水印管理",
+            "url": "/filereading/watermark"
+          }
+        ]
+      },
+      {
+        "name": "流程定义",
+        "url": "/process/processDefinition"
+      },
+      {
+        "name": "机构管理",
+        "url": "/tem/organise"
+      },
+      {
+        "name": "待办任务",
+        "url": "/process/taskTodo"
+      },
+      {
+        "name": "人员管理",
+        "url": "/tem/person"
+      },
+      {
+        "name": "角色管理",
+        "url": "/tem/role"
+      },
+      {
+        "name": "权限管理",
+        "url": "/system/permission"
+      },
+      {
+        "name": "字典管理",
+        "url": "/tem/dict"
+      },
+      {
+        "name": "定时任务",
+        "url": "/tem/task"
+      },
+      {
+        "name": "系统日志",
+        "url": "/archive/log"
+      },
+      {
+        "name": "数据同步",
+        "url": "/filereading/backuprecovery"
+      }
+    ]
+  }
+]

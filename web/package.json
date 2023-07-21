@@ -1,0 +1,75 @@
+{
+  "name": "@archive/core",
+  "version": "0.0.1",
+  "description": "档案馆室一体化平台",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build  --no-module --report",
+    "lint": "vue-cli-service lint"
+  },
+  "dependencies": {
+    "@antv/g6": "^4.6.4",
+    "@archive/core-detection": "^0.0.1",
+    "@archive/dzdacqbc": "^0.0.1",
+    "@archive/electronic_borrowing": "^0.0.1",
+    "@archive/file-name-setting": "^0.0.1",
+    "@archive/fz": "^0.0.1",
+    "@archive/impexp": "^0.0.1",
+    "@archive/kufang": "^0.0.1",
+    "@archive/manage-appraisal": "^0.0.1",
+    "@archive/manage-archive-change": "^0.0.1",
+    "@archive/manage-atlas": "^0.0.1",
+    "@archive/manage-file": "^0.0.1",
+    "@archive/manage-filecar": "^0.0.1",
+    "@archive/manage-fonds-descriptive-file": "^0.0.1",
+    "@archive/manage-handover": "^0.0.1",
+    "@archive/manage-mapping": "^0.0.1",
+    "@archive/opinion-management": "^0.0.1",
+    "@archive/receive-base": "^0.0.1",
+    "@archive/receive-offline-filling": "^0.0.1",
+    "@archive/receive-online-filling": "^0.0.1",
+    "@archive/utilization-compilation": "^0.0.1",
+    "@archive/utilization-consult": "^0.0.1",
+    "@archive/utilization_search": "^0.0.1",
+    "@archive/utilization_statistics": "^0.0.1",
+    "@dr/auto": "^0.0.2",
+    "@dr/cache": "^0.0.1",
+    "@dr/ckeditor5-document": "^34.0.0",
+    "@dr/framework": "^0.0.4",
+    "@dr/process": "^0.1.0",
+    "@dr/task": "^0.0.1",
+    "core-js": "^3.22.5",
+    "cropperjs": "^1.5.12",
+    "crypto-browserify": "^3.12.0",
+    "dayjs": "^1.11.1",
+    "echarts": "^4.9.0",
+    "file-saver": "^2.0.5",
+    "flv.js": "^1.6.2",
+    "gm-crypto": "^0.1.8",
+    "path-browserify": "^1.0.1",
+    "qrcodejs2": "0.0.2",
+    "stream-browserify": "^3.0.0",
+    "tiff.js": "^1.0.0",
+    "v-charts": "^1.19.0",
+    "vue-simple-uploader": "^0.7.6",
+    "vue-particles": "^1.0.9",
+    "vue-splitpane": "1.0.2",
+    "vue2-ace-editor": "^0.0.15"
+  },
+  "devDependencies": {
+    "@dr/vue-cli-plugin-dr": "^2.0.1",
+    "@vue/cli-service": "^5.0.4"
+  },
+  "browserslist": {
+    "production": [
+      "chrome > 69",
+      "firefox > 49",
+      "since 2016"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

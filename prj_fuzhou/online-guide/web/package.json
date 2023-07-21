@@ -1,0 +1,11 @@
+{
+  "name": "@archive/fz-online-guide",
+  "version": "0.0.1",
+  "description": "在线监督指导",
+  "dlib": true,
+  "dependencies": {
+    "@dr/framework": "^0.0.4",
+    "@archive/core": "^0.0.1",
+    "@dr/process": "^0.1.0"
+  }
+}

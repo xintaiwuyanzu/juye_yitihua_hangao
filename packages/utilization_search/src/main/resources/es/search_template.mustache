@@ -1,0 +1,182 @@
+{
+    {{!分页参数，这里有问题，默认最大支持1w深度}}
+    {{#from}}
+        "from": {{from}},
+    {{/from}}
+    {{^from}}
+        "from": 0,
+    {{/from}}
+    {{!每一页大小}}
+    {{#size}}
+        "size": {{size}},
+    {{/size}}
+    {{^size}}
+        "size": 100,
+    {{/size}}
+    {{!查询参数}}
+    "query": {
+        "bool":{
+           "filter":{
+           {{!过滤条件 多条件}}
+             "bool":{
+               "must":[
+               {{#termList}}
+               {"terms":{
+                 "{{field}}":{{#tojson}}values{{/tojson}}
+               } }{{^last}},{{/last}}
+               {{/termList}}
+               ]
+             }
+           },
+           "must":[
+           {{!多次检索 用and连接}}
+           {{#boolList}}
+           {
+             "bool":{
+             {{#query}}
+              {{!全文检索 多个短语匹配}}
+                "should":[
+                {{#querys}}
+                {
+                "match_phrase":{
+                "TITLE": { "query": "{{query}}"  }
+                 }
+                 },
+                 {
+                  "match_phrase":{
+                  "DUTY_PERSON": { "query": "{{query}}"  }
+                  }
+                  },
+                  {
+                  "match_phrase":{
+                  "KEY_WORDS": { "query": "{{query}}"  }
+                  }
+                  },
+                  {
+                  "match_phrase":{
+                  "FOND_NAME": { "query": "{{query}}"  }
+                  }
+                  },
+                  {
+                  "match_phrase":{
+                  "CATEGORY_NAME": { "query": "{{query}}"  }
+                  }
+                  },
+                  {
+                  "match_phrase":{
+                  "ORG_CODE": { "query": "{{query}}"  }
+                  }
+                  },
+                  {
+                  "match_phrase":{
+                  "ARCHIVE_CODE": { "query": "{{query}}"  }
+                  }
+                  },
+                  {
+                  "match_phrase":{
+                  "ORG_NAME": { "query": "{{query}}"  }
+                  }
+                  },
+                 {
+                 "match_phrase":{
+                  "CONTENT": { "query": "{{query}}"  }
+                  }
+                 }
+                 {{^querysLast}}, {{/querysLast}}
+                {{/querys}}
+                ]
+             {{/query}}
+             {{^query}}
+                {{!高级检索}}
+                {{#isMust}}
+                  "must":[
+                    {{!多条件 且 条件}}
+                    {{#mustList}}
+                    {
+                      {{#isPhrase}}
+                      "match_phrase":{
+                         "{{field}}": { "query": "{{query}}"  }
+                      }
+                      {{/isPhrase}}
+                      {{^isPhrase}}
+                      "match":{
+                         "{{field}}": { "query": "{{query}}","operator":"AND","analyzer":"search_pinyin"}
+                      }
+                      {{/isPhrase}}
+                    } {{^mustLast}}, {{/mustLast}}
+                    {{/mustList}}
+                  ]
+                {{/isMust}}
+                {{#isShould}}
+                  "should":[
+                    {{!多条件 或 条件}}
+                    {{#shouldList}}
+                    {
+                       {{#isPhrase}}
+                          "match_phrase":{
+                            "{{field}}": { "query": "{{query}}"  }
+                          }
+                       {{/isPhrase}}
+                       {{^isPhrase}}
+                          "match":{
+                            "{{field}}": { "query": "{{query}}","operator":"AND","analyzer":"search_pinyin"}
+                          }
+                       {{/isPhrase}}
+                    } {{^shouldLast}}, {{/shouldLast}}
+                    {{/shouldList}}
+                  ]
+                {{/isShould}}
+             {{/query}}
+             }
+           }{{^last}}, {{/last}}
+           {{/boolList}}
+           ]
+
+        }
+    },
+    {{!返回字段}}
+    {{!排序参数}}
+    "sort": [
+        {{#sort}}
+            {
+                "{{key}}": {
+                    "order": "{{order}}",
+                    "missing": "_last"
+                }
+            }
+        {{/sort}}
+        {{^sort}}
+            {
+                "_score":{
+                    "order":"desc"
+                }
+            }
+        {{/sort}}
+    ],
+"aggregations":{
+     "cateGory":{
+	    "terms":{
+		  "field":"CATEGORY_NAME"
+		},
+        "aggregations":{
+		  "countCateGoryCode":{"value_count":{"field":"CATEGORY_NAME"}}
+		}
+	 },
+	 "tagCount":{
+	    "terms":{
+	      "field":"tag.name",
+	      "size": 2
+	    }
+	 }
+  },
+    {{!高亮参数}}
+    "highlight": {
+        "pre_tags": ["<span style=\"-webkit-text-fill-color: red\">"],
+        "post_tags": ["</span>"],
+        "require_field_match":true,
+        "fields": {
+            "*": {}
+        }
+    },
+"collapse":{"field":"id.keyword"}
+}

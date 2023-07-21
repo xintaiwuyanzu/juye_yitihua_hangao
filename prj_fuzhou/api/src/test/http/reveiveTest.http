@@ -1,0 +1,45 @@
+###测试调用归档接口
+POST http://192.168.30.10/api/receive/download
+Content-Type: application/json; charset=UTF-8
+
+{
+  "files": [
+    {
+      "path": "350100-0002-0100001005-2021-D30-000008.zip",
+      "systemName": "福州市政务服务管理平台",
+      "businessId": "350100-0002-ZW20210831005",
+      "systemNum": "SP10",
+      "digitaldigest": "d5864b0b3f438f2a15e35f0c551e362b"
+    }
+  ],
+  "xmlPath": "350100-0002-ZW20210831005.xml"
+}
+
+
+###测试调用回执接口
+POST http://172.20.13.231:28089/fwapi/c/api.transfer/archivePack.archiveResult
+Content-Type: application/json; charset=UTF-8
+
+{
+  "businessId":"350100-0002-0100001005-2021-D30-000002",
+  "state":"1",
+  "result":"1",
+  "result_str":""
+}
+
+###测试调用下载接口
+POST http://localhost/api/receive/download
+Content-Type: application/json; charset=UTF-8
+
+{
+  "files": [
+    {
+      "path": "350100-0002-0100001005-2021-D30-000002/202109010944033/350100-0002-0100001005-2021-D30-000002.zip",
+      "systemName": "福州市政务服务管理平台",
+      "businessId": "350100-0002-0100001005-2021-D30-000002",
+      "systemNum": "SP10",
+      "digitaldigest": "2f1c4daf9b2250b18aa0b3d65efa267b"
+    }
+  ],
+  "xmlPath": "350100-0002-0100001005-2021-D30-000002/202109010944033/350100-0002-ZW20210901002.xml"
+}

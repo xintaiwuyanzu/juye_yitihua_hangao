@@ -1,0 +1,11 @@
+{
+  "name": "archive_fuzhou",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "web",
+    "packages/*/web",
+    "packages/utilization-consult/userSystem",
+    "prj_fuzhou/*/web"
+  ]
+}

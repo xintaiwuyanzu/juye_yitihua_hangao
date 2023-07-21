@@ -1,0 +1,12 @@
+{
+  "name": "@archive/fz",
+  "version": "0.0.1",
+  "description": "福州项目前端项目汇总",
+  "dlib": true,
+  "dependencies": {
+    "@archive/fz-online-guide": "^0.0.1",
+    "@archive/fz-online-check": "^0.0.1",
+    "@archive/fz_ofd": "^0.0.1",
+    "@dr/framework": "^0.0.4"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@archive/manage-filecar",
+  "version": "0.0.1",
+  "description": "档案管理相关前端代码",
+  "dlib": true,
+  "devDependencies": {
+    "@dr/framework": "^0.0.4",
+    "@dr/process": "^0.1.0",
+    "@archive/core": "^0.0.1"
+  }
+}

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>fz_parent</artifactId>
+        <groupId>com.dr.archive.fuzhou</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <artifactId>api</artifactId>
+    <dependencies>
+        <dependency>
+            <groupId>com.dr.archive.fuzhou</groupId>
+            <artifactId>approve</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive.fuzhou</groupId>
+            <artifactId>configManager</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive.fuzhou</groupId>
+            <artifactId>ofd</artifactId>
+        </dependency>
+        <!--<dependency>
+            <groupId>com.dr.archive.fuzhou</groupId>
+            <artifactId>ocr</artifactId>
+        </dependency>-->
+        <dependency>
+            <groupId>com.dr.archive.fuzhou</groupId>
+            <artifactId>manage-mapping</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive.fuzhou</groupId>
+            <artifactId>portal</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive.fuzhou</groupId>
+            <artifactId>informationOutput</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive.fuzhou</groupId>
+            <artifactId>online-guide</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive.fuzhou</groupId>
+            <artifactId>online-check</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

@@ -1,0 +1,78 @@
+.metaView {
+  display: flex;
+
+  .index_main {
+    overflow: auto;
+  }
+
+  .vue-splitter-container {
+    display: flex;
+
+    .splitter-pane {
+      flex: 1;
+      overflow: auto;
+    }
+
+    .files {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+
+    .mask {
+      position: absolute;
+      cursor: move;
+      user-select: none;
+    }
+  }
+
+  .file_container {
+    height: 100%;
+  }
+
+  .el-collapse-item__header {
+    padding: 13px 15px;
+  }
+
+  .detailContainer {
+    padding: 0px 10px;
+
+    .detailTabs {
+
+      .el-tabs__content {
+        display: none;
+      }
+    }
+
+    .detailContext {
+      margin-top: 4px;
+    }
+  }
+
+
+  //元数据显示
+  .meta_info {
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    overflow: auto;
+
+    .detailMain {
+      flex: 1;
+      overflow: auto;
+      margin: 10px 0px;
+    }
+  }
+
+  .changeBtn {
+    position: absolute;
+    right: 6px;
+    padding: 8px;
+    top: 50%;
+    z-index: 2000;
+
+    span {
+      writing-mode: vertical-lr;
+    }
+  }
+}

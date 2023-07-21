@@ -1,0 +1,17 @@
+{
+  "name": "@archive/utilization-consult-user-system",
+  "version": "0.0.1",
+  "description": "档案电子阅览室",
+  "dlib": "true",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build  --no-module --report"
+  },
+  "dependencies": {
+    "@dr/framework": "^0.0.4"
+  },
+  "devDependencies": {
+    "@dr/vue-cli-plugin-dr": "^2.0.1",
+    "@vue/cli-service": "^5.0.1"
+  }
+}

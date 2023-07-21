@@ -1,0 +1,14 @@
+/.idea/
+*.iml
+files
+
+*/target/
+/*/*/target/
+/process/
+**/node_modules/
+web/dist/
+**/yarn.lock
+**/yarn-error.log
+logs
+/packages/utilization-consult/userSystem/dist/
+/packages/ckeditor/web/build

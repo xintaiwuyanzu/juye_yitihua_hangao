@@ -1,0 +1,29 @@
+export default {
+    Seconds:{
+        name:'秒',
+        specific:'具体秒数',
+    },
+    Minutes:{
+        name:'分',
+        specific:'具体分钟数',
+    },
+    Hours:{
+        name:'时',
+        specific:'具体小时数',
+    },
+    Day:{
+        name:'天',
+        specificDay:'具体天数',
+    },
+    Week:['天','一','二','三','四','五','六'].map(val=>'星期'+val),
+    Month:{
+        name:'月',
+        specific:'具体月数',
+    },
+    Year:{
+        name:'年',
+        specific:'具体年份',
+    },
+    Save:'保存',
+    Close:'关闭'
+}

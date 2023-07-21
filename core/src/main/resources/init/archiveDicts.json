@@ -1,0 +1,122 @@
+[
+  {
+    "order": 2,
+    "type": "archive",
+    "key": "archive.archiveType.ARC",
+    "value": "案卷"
+  },
+  {
+    "order": 2,
+    "type": "archive",
+    "key": "archive.archiveType.FILE",
+    "value": "文件"
+  },
+  {
+    "order": 1,
+    "type": "archive",
+    "key": "archive.archiveType.PRO",
+    "value": "项目"
+  },
+  {
+    "order": 6,
+    "type": "archive",
+    "key": "archive.classified.GK",
+    "value": "公开级"
+  },
+  {
+    "order": 5,
+    "type": "archive",
+    "key": "archive.classified.GN",
+    "value": "国内级"
+  },
+  {
+    "order": 2,
+    "type": "archive",
+    "key": "archive.classified.JM",
+    "value": "机密级"
+  },
+  {
+    "order": 1,
+    "type": "archive",
+    "key": "archive.classified.MM",
+    "value": "秘密级"
+  },
+  {
+    "order": 4,
+    "type": "archive",
+    "key": "archive.classified.NB",
+    "value": "内部级"
+  },
+  {
+    "order": 3,
+    "type": "archive",
+    "key": "archive.classified.UM",
+    "value": "绝密级"
+  },
+  {
+    "order": 1,
+    "type": "archive",
+    "key": "archive.compilationStatus.0",
+    "value": "待发布"
+  },
+  {
+    "order": 2,
+    "type": "archive",
+    "key": "archive.compilationStatus.1",
+    "value": "已发布"
+  },
+  {
+    "order": 1,
+    "type": "archive",
+    "key": "archive.materialType.0",
+    "value": "史志类"
+  },
+  {
+    "order": 2,
+    "type": "archive",
+    "key": "archive.materialType.1",
+    "value": "画册类"
+  },
+  {
+    "order": 1,
+    "type": "archive",
+    "key": "archive.publicType.0",
+    "value": "不公开"
+  },
+  {
+    "order": 2,
+    "type": "archive",
+    "key": "archive.publicType.1",
+    "value": "公开"
+  },
+  {
+    "order": 4,
+    "type": "archive",
+    "key": "archive.retention.C",
+    "value": "长期"
+  },
+  {
+    "order": 5,
+    "type": "archive",
+    "key": "archive.retention.D",
+    "value": "短期"
+  },
+  {
+    "order": 3,
+    "type": "archive",
+    "key": "archive.retention.D10",
+    "value": "定期十年"
+  },
+  {
+    "order": 2,
+    "type": "archive",
+    "key": "archive.retention.D30",
+    "value": "定期三十年"
+  },
+  {
+    "order": 1,
+    "type": "archive",
+    "key": "archive.retention.Y",
+    "value": "永久"
+  }
+]

@@ -1,0 +1,605 @@
+[
+  {
+    "detectionType": "authenticity",
+    "code": "1-1-1",
+    "linkType": "gd",
+    "title": "电子文件来源真实性",
+    "stdDescription": "通过检测归档电子文件中的固化信息是否有效，确认电子文件来源的真实性。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过注册分配账号接口的方式管理对接系统，保证对接系统真实性。"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-1-2",
+    "linkType": "gd",
+    "title": "电子文件来源真实性",
+    "stdDescription": "通过检测归档电子文件中的固化信息是否有效，确认电子文件来源的真实性。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测交接单据中数字摘要信息与实际收到归档信息包数字摘要值是否相同"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-2-1",
+    "linkType": "gd",
+    "title": "电子文件元数据准确性",
+    "stdDescription": "检测归档电子文件元数据是否符合 DA/T 46-2009 等标准或自定义元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包元数据是否符合《电子文件归档技术规范》中的元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-2-2",
+    "linkType": "gd",
+    "title": "电子文件元数据准确性",
+    "stdDescription": "检测归档电子文件元数据是否符合 DA/T 46-2009 等标准或自定义元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过对比接收到归档信息包的电子文件号与系统内该全宗门类的电子文件号是否重复"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-2-3",
+    "linkType": "gd",
+    "title": "电子文件元数据准确性",
+    "stdDescription": "检测归档电子文件元数据是否符合 DA/T 46-2009 等标准或自定义元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "校验文件实际页数与页数元数据是否一致"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-3-1",
+    "linkType": "gd",
+    "title": "电子文件内容真实性",
+    "stdDescription": "检测电子文件内容数据中包含的电子属性信息与电子文件元数据中记录的信息是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测交接单据中数字摘要信息与实际收到归档信息包数字摘要值是否相同"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-3-2",
+    "linkType": "gd",
+    "title": "电子文件内容真实性",
+    "stdDescription": "检测电子文件内容数据中包含的电子属性信息与电子文件元数据中记录的信息是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-4-1",
+    "linkType": "gd",
+    "title": "元数据与内容关联一致性",
+    "stdDescription": "检测电子文件元数据中记录的文件存储位置与电子文件内容数据的实际存储位置是否一致",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-5-1",
+    "linkType": "gd",
+    "title": "归档信息包真实性",
+    "stdDescription": "检测电子文件归档信息包的信息组织结构和内容是否符合国家有关规定；\n检测归档的信息包与业务部门发送的信息包是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包文件结构是否符合包结构定义"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-5-2",
+    "linkType": "gd",
+    "title": "归档信息包真实性",
+    "stdDescription": "检测电子文件归档信息包的信息组织结构和内容是否符合国家有关规定；\n检测归档的信息包与业务部门发送的信息包是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过分配加密密钥，归档信息包在网络传输过程中使用sm4加密算法加密保证传输过程数据安全。系统接收到归档信息包后按照同样的算法解压归档信息包，从而保证归档信息包的一致性。"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-1-1",
+    "linkType": "yj",
+    "title": "电子档案来源真实性",
+    "stdDescription": "通过检测移交电子档案中的固化信息是否有效确认电子档案来源的真实性。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "移交与接收都在同网段同平台下，数据只是逻辑迁移，会生成标准格式的交接单据"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-2-1",
+    "linkType": "yj",
+    "title": "电子档案元数据准确性",
+    "stdDescription": "检测电子档案元数据是否符合 DA/T 46-2009 等标准或自定义元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包元数据是否符合电子文件归档技术规范中的元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-2-2",
+    "linkType": "yj",
+    "title": "电子档案元数据准确性",
+    "stdDescription": "检测电子档案元数据是否符合 DA/T 46-2009 等标准或自定义元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过对比接收到档案的档号与系统内该全宗门类的档号是否重复"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-3-1",
+    "linkType": "yj",
+    "title": "电子档案内容真实性",
+    "stdDescription": "检测电子档案内容数据中包含的电子属性信息与电子档案元数据中记录的信息是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "与1-1-2相同"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-3-2",
+    "linkType": "yj",
+    "title": "电子档案内容真实性",
+    "stdDescription": "检测电子档案内容数据中包含的电子属性信息与电子档案元数据中记录的信息是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-4-1",
+    "linkType": "yj",
+    "title": " 元数据与内容关联一致性",
+    "stdDescription": "检测电子档案元数据中记录的文件存储位置与电子档案内容数据的实际存储位置是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-5-1",
+    "linkType": "yj",
+    "title": "移交信息包真实性",
+    "stdDescription": "检测电子档案移交信息包的信息组织结构和内容是否符合《电子档案移交与接收办法》的要求。\n检测接收的信息包与移交的信息包是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "移交与接收都在同网段同平台下，数据只是逻辑迁移，会生成标准格式的交接单据"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-1-1",
+    "linkType": "bc",
+    "title": "电子档案固化信息",
+    "stdDescription": "通过检测长期保存电子档案中的固化信息是否有效确认电子档案在长期保存期间的真实性。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测交接单据中存档信息包数字摘要与存档信息包实际摘要是否一致"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-2-1",
+    "linkType": "bc",
+    "title": "电子档案元数据准确性",
+    "stdDescription": "检测电子档案元数据是否符合 DA/T 46-2009 等标准或自定义元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "长期保存库与管理库定时同步，不做此项检测"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-3-1",
+    "linkType": "bc",
+    "title": "电子档案内容真实性",
+    "stdDescription": "检测电子档案内容数据中包含的电子属性信息与电子档案元数据中记录的信息是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测交接单据中存档信息包数字摘要与存档信息包实际摘要是否一致"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-3-2",
+    "linkType": "bc",
+    "title": "电子档案内容真实性",
+    "stdDescription": "检测电子档案内容数据中包含的电子属性信息与电子档案元数据中记录的信息是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测存档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-4-1",
+    "linkType": "bc",
+    "title": "元数据与内容关联一致性",
+    "stdDescription": "检测电子档案元数据中记录的文件存储位置与电子档案内容数据的实际存储位置是否一致。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测存档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "authenticity",
+    "code": "1-5-1",
+    "linkType": "bc",
+    "title": "保存信息包真实性",
+    "stdDescription": "检测电子档案保存信息包和入库时是否一致；对于保存信息包为 EEP 封装包的情况下，检测 EEP封装包及其元数据是否符合 DA/T 48-2009 要求。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测存档信息包文件结构是否符合包结构定义"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-1-1",
+    "linkType": "gd",
+    "title": "电子文件数据总量",
+    "stdDescription": "检测 GB/T 18894-2016 表 A.1《电子文件归档登记表》中登记的电子文件数量和字节数与实际归档的电子文件数量和字节数是否相符。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测交接单据中归档信息包字节数与归档信息包实际字节数是否相同"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-1-2",
+    "linkType": "gd",
+    "title": "电子文件数据总量",
+    "stdDescription": "检测 GB/T 18894-2016 表 A.1《电子文件归档登记表》中登记的电子文件数量和字节数与实际归档的电子文件数量和字节数是否相符。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-2-1",
+    "linkType": "gd",
+    "title": "电子文件元数据完整性",
+    "stdDescription": "对照 DA/T 46-2009 或自定义元数据方案检测元数据项是否齐全完整；\n反映重要问题的归档电子文件是否包括主要修改过程和办理情况记录；\n具有连续编号的元数据项（比如归档号、件内顺序号等）是否有漏号现象等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包元数据是否符合《电子文件归档技术规范》中的元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-2-2",
+    "linkType": "gd",
+    "title": "电子文件元数据完整性",
+    "stdDescription": "对照 DA/T 46-2009 或自定义元数据方案检测元数据项是否齐全完整；\n反映重要问题的归档电子文件是否包括主要修改过程和办理情况记录；\n具有连续编号的元数据项（比如归档号、件内顺序号等）是否有漏号现象等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "根据政务服务事项管理系统同步到智能归档配置系统中的归档文件规则判定包内文件是否缺少文件"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-2-3",
+    "linkType": "gd",
+    "title": "电子文件元数据完整性",
+    "stdDescription": "对照 DA/T 46-2009 或自定义元数据方案检测元数据项是否齐全完整；\n反映重要问题的归档电子文件是否包括主要修改过程和办理情况记录；\n具有连续编号的元数据项（比如归档号、件内顺序号等）是否有漏号现象等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "同一批次归档信息包的电子文件号判定是否连续、重复"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-3-1",
+    "linkType": "gd",
+    "title": "电子文件内容完整性",
+    "stdDescription": "检测归档电子文件的内容数据是否齐全完整。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-4-1",
+    "linkType": "gd",
+    "title": "归档信息包完整性",
+    "stdDescription": "对照单位的归档范围检测归档信息包的元数据和内容数据是否符合要求；\n对照归档信息包元数据中记录的文件数量检测内容数据是否齐全完整。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包元数据是否符合《电子文件归档技术规范》中的元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-4-2",
+    "linkType": "gd",
+    "title": "归档信息包完整性",
+    "stdDescription": "对照单位的归档范围检测归档信息包的元数据和内容数据是否符合要求；\n对照归档信息包元数据中记录的文件数量检测内容数据是否齐全完整。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过对比接收到归档信息包的电子文件号与系统内该全宗门类的电子文件号是否重复"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-4-3",
+    "linkType": "gd",
+    "title": "归档信息包完整性",
+    "stdDescription": "对照单位的归档范围检测归档信息包的元数据和内容数据是否符合要求；\n对照归档信息包元数据中记录的文件数量检测内容数据是否齐全完整。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包内文件内容是否与智能归档系统中的归档范围一致。"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-1-1",
+    "linkType": "yj",
+    "title": "电子档案数据总量",
+    "stdDescription": "检测《电子档案移交与接收办法》附件 3 中登记的电子档案数量和字节数与实际移交的电子档案数量和字节数是否相符。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "移交与接收都在同网段同平台下，数据只是逻辑迁移，会生成标准格式的交接单据"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-2-1",
+    "linkType": "yj",
+    "title": "电子档案元数据完整性",
+    "stdDescription": "对照 DA/T 46-2009 或自定义元数据方案检测元数据项是否齐全完整；\n反映重要问题的电子档案是否包括主要修改过程和办理情况记录；\n具有连续编号的元数据项（比如档号、件内顺序号等）是否有漏号现象等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包元数据是否符合电子文件归档技术规范中的元数据方案要求，包括数据长度、类型、格式、值域以及元数据项赋值是否合理等。"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-2-2",
+    "linkType": "yj",
+    "title": "电子档案元数据完整性",
+    "stdDescription": "对照 DA/T 46-2009 或自定义元数据方案检测元数据项是否齐全完整；\n反映重要问题的电子档案是否包括主要修改过程和办理情况记录；\n具有连续编号的元数据项（比如档号、件内顺序号等）是否有漏号现象等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "判定同一批次归档信息包的档号是否连续、重复"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-3-1",
+    "linkType": "yj",
+    "title": " 电子档案内容完整性",
+    "stdDescription": "检测电子档案的内容数据是否齐全完整。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-4-1",
+    "linkType": "yj",
+    "title": "移交信息包完整性",
+    "stdDescription": "对照移交信息包元数据中记录的文件数量检测内容数据是否齐全完整。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测归档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-1-1",
+    "linkType": "bc",
+    "title": "电子档案数据总量",
+    "stdDescription": "按批次检测电子档案元数据中记录的电子档案数量和字节数与实际的电子档案数量和字节数是否相符。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测交接单据中存档信息包字节数与存档信息包实际字节数是否相同"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-1-2",
+    "linkType": "bc",
+    "title": "电子档案数据总量",
+    "stdDescription": "按批次检测电子档案元数据中记录的电子档案数量和字节数与实际的电子档案数量和字节数是否相符。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测存档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-2-1",
+    "linkType": "bc",
+    "title": "电子档案元数据完整性",
+    "stdDescription": "对照 DA/T 46-2009 或自定义元数据方案检测元数据项是否齐全完整；\n具有连续编号的元数据项（比如档号、件内顺序号等）是否有漏号现象。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "长期保存库与管理库定时同步，不做此项检测"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-3-1",
+    "linkType": "bc",
+    "title": "电子档案内容完整性",
+    "stdDescription": "检测电子档案的内容数据是否齐全完整。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测存档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "integrity",
+    "code": "2-4-1",
+    "linkType": "bc",
+    "title": "保存信息包完整性",
+    "stdDescription": "检测电子档案保存信息包的元数据和内容数据是否齐全完整；\n对于保存信息包为 EEP 封装包的情况下，对照 DA/T 46-2009 和 DA/T 48-2009 要求检测 EEP 封装包的元数据项目是否完整。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "检测存档信息包内归档文件集元数据是否与包内实际文件一致"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-1-1",
+    "linkType": "gd",
+    "title": "电子文件元数据可用性",
+    "stdDescription": "检测电子文件元数据是否可以被正常访问。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过读取元数据的方式检测电子文件元数据文件是否可以被正常访问。"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-2-1",
+    "linkType": "gd",
+    "title": "电子文件内容可用性",
+    "stdDescription": "检测电子文件内容数据是否符合归档要求，是否可以被正常打开和浏览。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "判定电子文件是否有效(电子文件0kb为无效文件）"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-2-2",
+    "linkType": "gd",
+    "title": "电子文件内容可用性",
+    "stdDescription": "检测电子文件内容数据是否符合归档要求，是否可以被正常打开和浏览。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "版式文件通过提取电子文件文本内容判断电子文件能否打开。多媒体文件通过提取文件头信息判断文件能否打开。"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-3-1",
+    "linkType": "gd",
+    "title": "电子文件软硬件环境",
+    "stdDescription": "检测电子属性元数据中记录的软硬件环境信息是否符合归档要求。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "无"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-4-1",
+    "linkType": "gd",
+    "title": "归档信息包可用性",
+    "stdDescription": "检测归档信息包是否包含影响其可用性的因素，如使用非公开压缩算法、加密等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过zip压缩率是否小于50%判断归档信息包是否为zip炸弹"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-4-2",
+    "linkType": "gd",
+    "title": "归档信息包可用性",
+    "stdDescription": "检测归档信息包是否包含影响其可用性的因素，如使用非公开压缩算法、加密等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过解压并提取归档信息包内容方式判断归档信息包是否可用"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-1-1",
+    "linkType": "yj",
+    "title": "电子档案元数据可用性",
+    "stdDescription": "检测电子档案元数据是否可以被正常访问。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过读取元数据的方式检测电子文件元数据文件是否可以被正常访问。"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-2-1",
+    "linkType": "yj",
+    "title": "电子档案内容可用性",
+    "stdDescription": "检测电子档案内容数据格式是否符合移交要求，是否可以被正常打开和浏览。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "判定电子文件是否有效(电子文件0kb为无效文件）"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-2-2",
+    "linkType": "yj",
+    "title": "电子档案内容可用性",
+    "stdDescription": "检测电子档案内容数据格式是否符合移交要求，是否可以被正常打开和浏览。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "版式文件通过提取电子文件文本内容判断电子文件能否打开。\n多媒体文件通过提取文件头信息判断文件能否打开。"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-3-1",
+    "linkType": "yj",
+    "title": "电子档案软硬件环境",
+    "stdDescription": "检测电子属性元数据中记录的软硬件环境信息是否符合移交要求。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "无"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-4-1",
+    "linkType": "yj",
+    "title": "移交信息包可用性",
+    "stdDescription": "检测移交信息包是否包含影响其可用性的因素，如使用非公开压缩算法、加密等。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "移交与接收都在同网段同平台下，数据只是逻辑迁移，会生成标准格式的交接单据"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-1-1",
+    "linkType": "bc",
+    "title": "电子档案元数据可用性",
+    "stdDescription": "检测电子档案元数据是否可以被正常访问。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "通过读取元数据的方式检测电子文件元数据文件是否可以被正常访问。"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-2-1",
+    "linkType": "bc",
+    "title": "电子档案内容可用性",
+    "stdDescription": "检测电子档案内容数据是否可以被正常打开和浏览，是否利于长期保存。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "解压存档信息包，检测包内电子文件和元数据文件是否可以正常打开"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-3-1",
+    "linkType": "bc",
+    "title": "电子档案软硬件环境",
+    "stdDescription": "检测电子档案软硬件环境是否适合继续长期保存。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "定期记录硬盘各项指标状态，定期扫描硬盘坏道"
+  },
+  {
+    "detectionType": "usability",
+    "code": "3-4-1",
+    "linkType": "bc",
+    "title": "备份数据可恢复性",
+    "stdDescription": "检测备份数据是否可以完整恢复",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "交接单据、存档信息包和包内管理过程元数据能够完整恢复电子档案完整生命周期。长期保存数据包恢复可以不依赖任何特定厂商。"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-1-1",
+    "linkType": "gd",
+    "title": "归档信息包病毒",
+    "stdDescription": "检测系统环境中是否安装杀毒软件；\n检测归档信息包是否包含计算机病毒。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "依托云平台网络防火墙和服务器杀毒软件实现病毒检测，通过检测后才能接收到归档信息包"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-2-1",
+    "linkType": "gd",
+    "title": "归档载体安全性",
+    "stdDescription": "检测载体内是否含有非归档文件；\n通过外观、读取情况等判定载体是否安全、可靠；\n针对光盘，检测其是否符合 DA/T38-2008 的有关要求。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "无此项检测（归档数据均依托系统进行检测，不涉及载体检测）"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-3-1",
+    "linkType": "gd",
+    "title": "归档过程安全性",
+    "stdDescription": "检测归档信息包在归档和保存过程中是否安全、可控。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "归档信息包在归档过程的安全实现方式与1-5-2相同，在保存过程中主要依托云平台定期检测并反馈结果。"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-1-1",
+    "linkType": "yj",
+    "title": "移交信息包病毒",
+    "stdDescription": "检测系统环境中是否安装杀毒软件；\n检测电子档案移交信息包是否包含计算机病毒。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "依托云平台网络防火墙和服务器杀毒软件实现对移交归档信息包的病毒检测。"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-2-1",
+    "linkType": "yj",
+    "title": "移交载体安全性",
+    "stdDescription": "检测载体内是否含有非移交文件；\n通过外观、读取情况等判定载体是否安全、可靠。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "无此项检测（数字档案馆、档案室系统均部署在云平台，归档数据仅逻辑移交）"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-3-1",
+    "linkType": "yj",
+    "title": "移交过程安全性",
+    "stdDescription": "检测移交信息包在移交和接收过程中是否安全、可控。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "移交与接收都在同网段同平台下，数据只是逻辑迁移，会生成标准格式的交接单据"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-1-1",
+    "linkType": "bc",
+    "title": "保存信息包病毒",
+    "stdDescription": "检测系统环境中是否安装杀毒软件；\n检测电子档案保存信息包是否包含计算机病毒。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "依托云平台网络防火墙和服务器杀毒软件实现对存档信息包的病毒检测。"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-2-1",
+    "linkType": "bc",
+    "title": "保存载体安全性",
+    "stdDescription": "通过外观、读取情况等判定载体是否安全、可靠。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "定期记录硬盘各项指标状态，定期扫描硬盘坏道"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-3-1",
+    "linkType": "bc",
+    "title": "软件系统安全性",
+    "stdDescription": "检测系统是否存在隐含的安全漏洞。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "无具体实现方式（依托云平台定期扫描漏洞并反馈结果，操作系统漏洞由云平台修复，应用系统由承建单位修复）"
+  },
+  {
+    "detectionType": "security",
+    "code": "4-4-1",
+    "linkType": "bc",
+    "title": "载体保管环境安全性",
+    "stdDescription": "对照国家有关规定，判断磁盘、磁带、光盘等各类载体的保管环境是否符合要求。",
+    "stdName": "DA/T 70-2018",
+    "testRecordMethod": "无具体实现方式 "
+  }
+]

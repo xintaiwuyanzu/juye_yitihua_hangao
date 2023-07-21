@@ -1,0 +1,30 @@
+#系统端口号
+server:
+  port: 8082
+  servlet:
+    session:
+      cookie:
+        name: das
+#数据源  目前先部署在局域网环境下
+mysql:
+  base: 192.168.1.140:3306/archive_fz_bushu
+  username: root
+  password: 1234
+fuzhou:
+  #审批系统下载归档文件Ip
+  approveIp: 192.168.118.224
+  #审批系统信息回执IP
+  archiveresultIp: 192.168.118.224
+  #智能归档配置IP
+  configIp: 192.168.1.144
+  #bsp系统IP
+  bspIp: 192.168.1.144
+  #ofd系统Ip
+  ofdIp: 192.168.1.143
+  #本机Ip
+  localIp: 192.168.1.140
+  #云阅读端口
+  ofd.viewPort: 8088
+#门户系统地址
+portal:
+  portalSystem: http://192.168.3.33:8100

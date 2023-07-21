@@ -1,0 +1,11 @@
+{
+  "name": "@archive/manage-fonds-descriptive-file",
+  "version": "0.0.1",
+  "description": "全宗卷管理相关前端代码",
+  "dlib": true,
+  "devDependencies": {
+    "@dr/framework": "^0.0.4",
+    "@archive/core": "^0.0.1",
+    "@archive/manage-file": "^0.0.1"
+  }
+}

@@ -1,0 +1,226 @@
+#todo 这里可以统一设置性能优化的配置
+#档案表单索引创建模板
+#模板优先级
+priority: 0
+#索引名称的匹配规则，只有匹配了名称的模板才按照这个模板动态创建索引
+index_patterns: [ archive_* ]
+#模板内容
+template:
+  #索引设置
+  settings:
+    index:
+      #分片数量，正常一个分片存500g？
+      number_of_shards: 4
+      #自动扩展备份数量，这个设置了不能在修改了
+      auto_expand_replicas: 0-4
+    #文本分析配置，es在建立索引或者查询的时候，按照指定的文本分析器执行分词
+    analysis:
+      #具体的文本分析器
+      analyzer:
+        #自定义中文和拼音两个分析器的结合 该分析器用于插入具体索引数据时
+        insert_pinyin:
+          #声明分析器是自定义的
+          type: custom
+          #声明分词器 ik_smart: 会做最粗粒度的拆分，比如会将“中华人民共和国国歌”拆分为“中华人民共和国,国歌”，适合 Phrase 查询。
+          #改为用 standard ik_smart粒度太粗 高亮时不精确
+          tokenizer: standard
+          #声明拦截器
+          filter: [
+            #先去掉没用的单词和字符
+              word_delimiter_graph,
+            #再去掉拼音
+              archive_pinyin
+          ]
+          #自定义中文和拼音两个分析器的结合 该分析器用于查询索引数据时
+        search_pinyin:
+          #声明分析器是自定义的
+          type: custom
+          #声明分词器 ik_smart_word: 会将文本做最细粒度的拆分，
+          #比如会将“中华人民共和国国歌”拆分为“中华人民共和国,中华人民,中华,华人,人民共和国,人民,人,民,共和国,共和,和,国国,国歌”，
+          #会穷尽各种可能的组合，适合 Term Query
+          #改为用 standard ik_smart粒度太粗 高亮时不精确
+          tokenizer: standard
+          #声明拦截器
+          filter: [
+            #先去掉没用的单词和字符
+              word_delimiter_graph,
+            #再去掉拼音
+            # archive_pinyin_chinese
+          ]
+      #同analyzer功能类似，用来解析处理类型为keyword的字段
+      normalizer:
+        pinyin:
+          type: custom
+          #声明拦截器
+          filter: [
+            #先去掉没用的单词和字符
+            #  word_delimiter_graph,
+            #再去掉拼音
+            #  archive_pinyin
+            # 解决大小写问题
+              lowercase
+          ]
+      #拦截过滤器定义
+      filter:
+        #自定义指定名称的过滤器
+        archive_pinyin:
+          #指定具体的实现 参考elasticsearch-analysis-pinyin
+          type: pinyin
+          #下面是拼音拦截器的具体参数
+          #中文全部转拼音
+          keep_joined_full_pinyin: true
+          keep_first_letter: false
+          keep_none_chinese: false
+          keep_original: true
+        archive_pinyin_chinese:
+          #指定具体的实现 参考elasticsearch-analysis-pinyin
+          type: pinyin
+          #下面是拼音拦截器的具体参数
+          keep_joined_full_pinyin: false
+          keep_full_pinyin: false
+          keep_first_letter: false
+          keep_none_chinese: false
+          keep_original: true
+          # keep_separate_chinese: true 处理 搜福州 出现 同音词 抚州 的问题
+          #keep_separate_chinese: true
+
+  #索引映射
+  mappings:
+    #是否支持动态添加字段
+    dynamic: true
+    #这里设置通用的字段，具体参考AbstractArchiveEntity
+    properties:
+      #全宗名称
+      FOND_NAME:
+        #不进行分词，直接索引,支持模糊、支持精确匹配，支持聚合、排序操作。
+        #text 支持分词，全文检索,支持模糊、精确查询,不支持聚合,排序操作; 没有长度限制
+        type: text
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        #支持多个搜索类型
+        fields:
+          raw:
+            type: keyword
+            #文本处理器，在查询和索引的时候解析文本，这里用文本处理
+            normalizer: pinyin
+      #全宗编码
+      FOND_CODE:
+        type: keyword
+      #分类号
+      CATE_GORY_CODE:
+        type: keyword
+        normalizer: pinyin
+      #分类名称
+      CATEGORY_NAME:
+        type: keyword
+      #标签 标签id,标签名称,标签词性
+      tag:
+        properties:
+          id:
+            type: keyword
+          name:
+            type: keyword
+          type:
+            type: keyword
+      #数据类型
+      SOURCE_TYPE:
+        type: keyword
+      #机构或问题编码
+      ORG_CODE:
+        type: text
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        fields:
+          raw:
+            type: keyword
+            normalizer: pinyin
+      #档案号
+      ARCHIVE_CODE:
+        type: text
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        fielddata: true
+        #normalizer: pinyin
+        fields:
+          raw:
+            type: keyword
+            normalizer: pinyin
+      #年份
+      VINTAGES:
+        type: text
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        fielddata: true
+        fields:
+          raw:
+            type: keyword
+            normalizer: pinyin
+      #形成日期
+      FILETIME:
+        type: keyword
+      #责任人
+      DUTY_PERSON:
+        type: text
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        fielddata: true
+        fields:
+          raw:
+            type: keyword
+            normalizer: pinyin
+      #状态
+      status_info:
+        type: keyword
+      ####下面的都是全文检索的
+      #机构或问题名称
+      ORG_NAME:
+        type: text
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        fields:
+          raw:
+            type: keyword
+            normalizer: pinyin
+      #题名
+      TITLE:
+        type: text
+        #高亮用到了，详细参考https://www.cnblogs.com/liang1101/p/7662719.html
+        index_options: offsets
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        fields:
+          raw:
+            type: keyword
+            normalizer: pinyin
+      #主题词
+      KEY_WORDS:
+        type: text
+        index_options: offsets
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        fields:
+          raw:
+            type: keyword
+            normalizer: pinyin
+      #备注
+      NOTE:
+        type: text
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        fields:
+          raw:
+            type: keyword
+            normalizer: pinyin
+      #原文内容
+      CONTENT:
+        term_vector: with_positions_offsets
+        type: text
+        analyzer: insert_pinyin
+        search_analyzer: search_pinyin
+        fields:
+          raw:
+            type: keyword
+            normalizer: pinyin
+            ignore_above: 256
+
+

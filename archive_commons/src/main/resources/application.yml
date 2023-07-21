@@ -1,0 +1,147 @@
+#数据源
+server:
+  port: 8088
+  servlet:
+    session:
+      cookie:
+        name: archive
+        http-only: true
+spring:
+  datasource:
+    url: jdbc:highgo://192.168.100.41:5866/highgo?currentSchema=archive_yitihua
+    username: highgo
+    password: Dr123456!
+    driver-class-name: com.highgo.jdbc.Driver
+    maxActive: 50
+    initialSize: 10
+    #本数据源包含的模块
+    includeModules: sys,common,form,utilize,archive,task,process
+    #程序启动时表结构更新策略:
+    ##none:无操作
+    ##update:更新或者创建实体类声明的表结构信息
+    ##validate:校验实体类与对应的数据库结构并打印SQL语句和提示信息
+    autoDDl: update
+    #下面都是hikari链接池的配置属性
+    #连接池里面的每一个链接空跑的最大时间，默认半小时
+    max-lifetime: 500000
+    #连接池最小存活量，默认无限制
+    minimum-idle: 5
+    #连接池最大数量，默认无限制
+    maximum-pool-size: 1000
+  servlet:
+    multipart:
+      #文件最大上传大小
+      max-file-size: 500MB
+      max-request-size: 500MB
+  main:
+    allow-circular-references: true
+  profiles:
+    active: dev
+  web:
+    resources:
+      static-locations:
+        - classpath:/resources/
+        - classpath:/static/
+        - classpath:/word/
+  neo4j:
+    uri: bolt://192.168.1.140:7687
+    authentication:
+      password: 123456
+      username: neo4j
+common:
+  auto-init-data: true
+  #启动验证码功能
+  enable-captcha: false
+  file-upload-urls:
+    #关键字管理上传筛选规则
+    - /api/keyword/uploadFile
+    - /api/filecar/uploadFile
+    - /api/compilationForm/uploadImg
+    - /api/template/uploadFile
+    - /api/ofd//document/export
+    - /api/batch/newBatch
+#  file:
+#    file-location: /home/data/files/upload
+#word转pdf
+FTP:
+  url: 192.168.200.246
+  name: root
+  password: 123123
+  localPath: D:\archive\File\AAAAA\
+  sftpPath: /etc/vsftpd/archiveFtp/
+archive:
+  common:
+    auto-init-index: true
+TEMPLATEPATCH: "F:\\template\\"
+
+sys:
+  name: jyw
+
+template:
+  download: F:\test
+  path: F:\template
+
+timedTask: false
+fuzhou:
+  ##审批中心相关配置
+  approve:
+    ##下载归档文件接口
+    base-url: http://${fuzhou.approveIp}:9100/
+    ##归档信息回执接口
+    archiveresult-url: http://${fuzhou.archiveresultIp}:9089/
+  #智能归档配置中心客户端
+  config:
+    base-url: http://${fuzhou.configIp}:8999/api/
+  #bsp基础开发平台
+  bsp:
+    base-url: http://${fuzhou.bspIp}:8080/
+    dubbo-url: ${fuzhou.bspIp}:20880
+  ofd:
+    #ofd 服务基础路径，其他参数自动配置
+    base-ip: ${fuzhou.ofdIp}
+    local-ip: ${fuzhou.localIp}
+  tag:
+    tagword: http://192.168.1.143:5023/aiplus/nlp/word/api/v1
+    tagkwords: http://192.168.1.143:5023//aiplus/nlp/keywords/api/v1
+    ip: 192.168.1.143:5023
+  im:
+    #即时通信url
+    word_pro_url: http://192.168.1.144:8002
+    word_pro_base: /webim/pc/#/chat/dialogue
+    #智能客服地址
+  customerService:
+    login_url: http://192.168.1.142:8998/#/autoLogin
+#ocr接口配置参数
+ocr:
+  baseUrl: https://mage.uibot.com.cn/
+  #通用文字 pubkey
+  general_pubkey: Wbm0MKOeoKZDNLzGVjK0RXri
+  #通用文字 secret_key
+  general_secret_key: nxMOYZje2wop8BRMdfvHnnzmMDMZEH2Z
+  #通用表格 pubkey
+  table_pubkey: 5iMZRGKoXA2YGXqayMN5pJU0
+  #通用表格 secret_key
+  table_secret_key: 3WQcBwqjEpmUqa6vxSVAz4UCsRQetAX4
+  #自定义模板 pubkey
+  template_pubkey: dF6HoOpKcw2gN0ovvkyRHkEv
+  #自定义模板 secret_key
+  template_secret_key: ensLE36Z8NAwREVk4SwxTwYr2i3ZPbfU
+#门户系统地址
+portal:
+  portalSystem: http://192.168.3.33:8100
+logging:
+  level:
+    com.dr: info
+
+#结构化原文地址
+struct:
+  url: D:/shuzihua/testExcel
+#备份最多保存数量
+back:
+  count: 3
+# 定时清空登录人时间  7200000 毫秒 俩小时
+loginLongTime: 7200000
+
+# 数据维护客户端地址
+client:
+  url: http://localhost:8081

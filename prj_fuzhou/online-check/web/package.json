@@ -1,0 +1,9 @@
+{
+  "name": "@archive/fz-online-check",
+  "version": "0.0.1",
+  "description": "在线执法检查",
+  "dlib": true,
+  "dependencies": {
+    "@dr/framework": "^0.0.4"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "name": "@archive/manage-atlas",
+  "version": "0.0.1",
+  "description": "图册管理相关前端代码",
+  "dlib": true,
+  "dependencies": {
+    "@dr/framework": "^0.0.4",
+    "@archive/core": "^0.0.1",
+    "vue-flip-page": "1.0.7"
+  }
+}

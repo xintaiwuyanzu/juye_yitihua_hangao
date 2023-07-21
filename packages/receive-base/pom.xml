@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>parent</artifactId>
+        <groupId>com.dr.archive</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <!--接收模块相关代码，如果这里的接收代码不能满足业务需求，可以继承或者抄此处代码-->
+    <artifactId>receive-base</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>dzdacqbc</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>core-detection</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>manage-fonds-descriptive-file</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>utilization-compilation</artifactId>
+        </dependency>
+    </dependencies>
+
+</project>

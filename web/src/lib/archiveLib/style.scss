@@ -1,0 +1,66 @@
+.archiveLibIndex {
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+
+  .fondTree {
+    overflow: auto;
+  }
+
+  .tables {
+    flex: 1;
+
+    .el-card__body {
+      padding: 0px;
+      display: flex;
+      height: 100%;
+      overflow: auto;
+      flex-direction: column;
+
+      > section {
+        flex: 1;
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+
+        .slot {
+          display: flex;
+        }
+
+        .index_main {
+          display: flex;
+          height: 100%;
+
+          .table-container {
+            flex: 1;
+
+            td.editColumn {
+              > div {
+                display: flex;
+
+                > section {
+                  margin-left: 6px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.highlight-row-red {
+  //高亮色
+  color: #f52a2a;
+}
+
+.highlight-row-yellow {
+  //高亮色
+  color: #cbc20f;
+}
+
+.highlight-row-pop {
+  //高亮色
+  color: #4507ef;
+}

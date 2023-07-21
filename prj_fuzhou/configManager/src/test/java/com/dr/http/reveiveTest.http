@@ -1,0 +1,43 @@
+###测试调用档号规则接口
+GET http://192.168.1.144:8999/api/ArchivedTypeNumber/getArchivedTypeNumber?typeCode=ws·dzgw&year=2020
+Content-Type: application/json; charset=UTF-8
+
+###重置密码
+POST http://localhost:8080/api/login/resetPassword?personId=admin
+Content-Type: application/json; charset=UTF-8
+
+
+###测试调用归档接口
+POST http://localhost:80/api/receive/download
+Content-Type: application/json; charset=UTF-8
+
+{
+  "files": [
+    {
+      "path": "350100-0002-0100001005-2021-D30-000451.zip",
+      "systemName": "福州市政务服务管理平台",
+      "businessId": "350100-0002-ZW20210831005",
+      "systemNum": "SP10",
+      "digitaldigest": "d5864b0b3f438f2a15e35f0c551e362b"
+    }
+  ],
+  "xmlPath": "350100-0059-113501005895929416GG20211231002.xml"
+}
+
+###测试调用新归档接口
+POST http://localhost:80/api/receive/online/receiveOnline
+Content-Type: application/json; charset=UTF-8
+
+
+{
+  "files": [
+    {
+      "path": "350100-0002-0100001005-2021-D30-000451.zip",
+      "systemName": "数字化加工工具",
+      "businessId": "202204242020",
+      "systemNum": "INSPUR-DZZW-MACHINING",
+      "digitaldigest": "d5864b0b3f438f2a15e35f0c551e362b"
+    }
+  ],
+  "xmlPath": "D:\\shuzihua\\zipPack\\202204242020.xml"
+}

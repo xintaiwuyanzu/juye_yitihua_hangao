@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <artifactId>parent</artifactId>
+        <groupId>com.dr.archive</groupId>
+        <version>1.0-SNAPSHOT</version>
+        <relativePath>../../pom.xml</relativePath>
+    </parent>
+    <!--档案统计相关代码-->
+    <artifactId>utilization_statistics</artifactId>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>receive-online-filling</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>manage-appraisal</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>receive-offline-filling</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.dr.archive</groupId>
+            <artifactId>manage-handover</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>3.1.1</version>
+            <!--排除ehcache，否则会报错-->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.ehcache</groupId>
+                    <artifactId>ehcache</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+    </dependencies>
+</project>
